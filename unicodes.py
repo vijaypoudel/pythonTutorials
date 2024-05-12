@@ -5,7 +5,7 @@
 
 print( "A=" , ord("A"))
 
-norm_string = input("Enter a string to hide in upper case")
+norm_string = input("Enter a string to hide in caps")
 
 secret_string = ""
 rebuild_message = ""
