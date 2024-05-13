@@ -1,6 +1,5 @@
 import math
 
-
 def rectangle_area():
     length = float(input("Enter the length"))
     width = float(input("Enter the width"))
@@ -10,7 +9,6 @@ def circle_area():
     radius = float(input("Please enter the radius of the circle"))
     area = math.pi * math.pow(radius,2)
     print("The are of the circle is ", area)
-
 
 def get_area(shape):
     shape = shape.lower()
