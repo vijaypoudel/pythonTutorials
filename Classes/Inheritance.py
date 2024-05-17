@@ -8,6 +8,7 @@ class Animal:
 
     @property
     def birth_type(self):
+        print("read", self.__class__)
         return self._birth_type
 
     @property
@@ -20,6 +21,7 @@ class Animal:
 
     @birth_type.setter
     def birth_type(self,birth_type):
+        print("write", self.__class__)
         self._birth_type = birth_type
 
     @appearance.setter
@@ -36,4 +38,35 @@ class Animal:
             type(self).__name__ , self.birth_type, self.appearance, self.blooded)
 
 class Mammal(Animal):
-    def __init__(self , birth_type=):
+    def __init__(self , birth_type="born_alive", apperance = "hair or fur",
+                 blooded="warm blooded",
+                 nurse_young = False):
+        Animal.__init__(self,birth_type,apperance,blooded)
+        self._nurse_young = nurse_young
+
+    @property
+    def nurse_young(self):
+        return self._nurse_young
+
+    @nurse_young.setter
+    def nurse_young(self, nurse_young):
+        print("hello there")
+        self._nurse_young = nurse_young
+
+    def __str__(self):
+        return super().__str__() + "and it is {} they nurse young".format(self.nurse_young)
+
+
+class Reptile(Animal):
+    def __init__(self , birth_type="born in an egg", apperance = "dry scales",
+                 blooded="cold blooded"):
+        Animal.__init__(self,birth_type,apperance,blooded)
+
+def main():
+
+    animal2 = Mammal("born alive", "hair or fur", "warm blooded" , True)
+
+    animal2.nurse_young = False
+    print(animal2)
+
+main()
