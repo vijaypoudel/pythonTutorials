@@ -34,6 +34,7 @@ class Animal:
 
 
     def __str__(self):
+        print("hello there", self.__class__)
         return "A {} is {} it is {} it is {}".format(
             type(self).__name__ , self.birth_type, self.appearance, self.blooded)
 
@@ -68,5 +69,11 @@ def main():
 
     animal2.nurse_young = False
     print(animal2)
+
+    # animal3 = Reptile("born in an egg",
+    #                   "dry scales".lower(),
+    #                   "cold bloooooded")
+    #
+    # print(animal3)
 
 main()
