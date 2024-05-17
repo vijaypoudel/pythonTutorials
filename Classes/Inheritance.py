@@ -34,3 +34,6 @@ class Animal:
     def __str__(self):
         return "A {} is {} it is {} it is {}".format(
             type(self).__name__ , self.birth_type, self.appearance, self.blooded)
+
+class Mammal(Animal):
+    def __init__(self , birth_type=):
