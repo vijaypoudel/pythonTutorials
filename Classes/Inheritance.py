@@ -65,15 +65,12 @@ class Reptile(Animal):
 
 def main():
 
-    animal2 = Mammal("born alive", "hair or fur", "warm blooded" , True)
+    mammal = Mammal("born alive", "hair or fur", "warm blooded" , True)
+    reptile = Reptile("born in a solid egg")
+    mammal = reptile
+    print(mammal)
 
-    animal2.nurse_young = False
-    print(animal2)
 
-    # animal3 = Reptile("born in an egg",
-    #                   "dry scales".lower(),
-    #                   "cold bloooooded")
-    #
-    # print(animal3)
+
 
 main()
