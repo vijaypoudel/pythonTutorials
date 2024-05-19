@@ -70,7 +70,4 @@ def main():
     mammal = reptile
     print(mammal)
 
-
-
-
 main()
