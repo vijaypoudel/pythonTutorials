@@ -15,7 +15,8 @@ try:
     dog_name = input("what is your dog name")
     if any(char.isdigit() for char in dog_name):
         raise Dog_name_error
-except Dog_name_error:
+except Dog_name_error as dg:
+    print(dg.args)
     print("Your dogs name can`t contain a number")
 
 
