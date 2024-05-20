@@ -5,8 +5,9 @@ with open("mydata2.txt", mode="w", encoding="utf-8") as my_file:
 
 try:
     my_file =  open("mydata3.txt", encoding="utf-8")
-except FileNotFoundError:
+except FileNotFoundError as ex:
     print("no such file exist in the system")
+    print(ex.args)
 else:
     print(my_file.read())
 finally:
