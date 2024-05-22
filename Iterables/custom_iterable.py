@@ -1,4 +1,4 @@
-class Alphabet
+class Alphabet:
     def __init__(self):
         self.letters = "sdasfasfasfasfafafasfasfsaf"
         self.index = -1
