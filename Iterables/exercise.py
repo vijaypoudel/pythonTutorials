@@ -6,7 +6,6 @@ class Alphabet:
     def __iter__(self):
         return self
 
-
     def __next__(self):
         if(self.second >= 100):
             raise StopIteration
